@@ -88,8 +88,17 @@ const duplicateWords = [
 ];
 
 function uniquifyArray(duplicateWords) {
-  arrayKing = [];
-  
+
+  if (duplicateWords.length === 0) {
+    return null;
+  }
+  let arrayKing = []
+  for (let i = 0; i < duplicateWords.length; i++) {
+    if (!arrayKing.includes(duplicateWords[i])) {
+      arrayKing.push(duplicateWords[i]);
+    }
+  }
+  return arrayKing
  }
 
 
